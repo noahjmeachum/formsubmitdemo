@@ -1,0 +1,267 @@
+
+/* HOME PAGE STYLES BEGIN HERE */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,600;0,700;1,300&display=swap');
+
+*  
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    
+    }
+
+body
+
+    {
+        background: rgb(252,204,251);
+        background: linear-gradient(90deg, rgba(252,204,251,1) 25%, rgba(169,223,254,1) 50%, rgba(93,228,255,0.9220063025210083) 75%);
+        overflow-x: hidden;
+    }
+
+.container
+
+    {
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+    }
+
+.container.header
+
+    {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.875rem;
+    }
+
+.menuToggle
+
+    {
+    display: none;
+    }
+
+header
+
+    {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0, 0, 0, 0.1) 0px 10px 15px -3px, rgb(0,0,0,0.05) 0px 4px 6px -2px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    }
+
+a
+    {
+    text-decoration: none;
+    color: #082302;
+    }
+
+.header .logo
+
+    {
+        font-size: 1.5rem;
+        font-family: 'Cedarville Cursive', cursive;
+    }
+
+.header .navigation
+
+    {
+        list-style: none;
+        display: flex;
+    }
+
+.header .navigation li
+
+    {
+      margin-left: 2rem;
+      font-size: 1.1rem;
+      padding: 0.4rem;
+    }
+
+    .header .navigation li.active
+
+    {
+        border-bottom: 2px solid rgb(172, 243, 255);
+    }
+
+.header .navigation li:hover
+
+    {
+        border-bottom: 2px solid rgb(172, 243, 255);
+    }        
+
+    footer
+
+    {
+        margin-top: 3rem;
+        background-color: #ffff;
+        box-shadow: 0px 0 5px rgba(0, 0, 0, 0.1rem );  
+    }
+
+    .container.footer
+
+    {
+
+        text-align: center;
+        padding: 1rem 0.875rem;
+    }
+
+    @media (max-width: 800px)
+
+    {
+        .header .navigation
+        {
+            display: none;
+        }
+
+        .header .menuToggle
+        {
+            display: flex;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .container.main
+
+        {
+          display: flex;
+          flex-direction: column;
+        
+        }
+
+        .main .col
+
+        {
+          width:100%;
+        }
+
+        .header .navigation.active
+
+        {
+          display: flex;
+          position: fixed;
+          top: 4rem;
+          background-color: #ffff;
+          width: 100%;
+          left: 0;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 1.25rem;
+          animation: slide 0.2s ease;
+        }
+
+        @keyframes slide
+
+        {
+            0%
+            {
+                left: -300px
+            }
+
+            100%
+            {
+                left: 0;
+            }
+        }
+
+        .header .navigation li
+
+        {
+          margin-left: 0rem;
+          padding: 1rem 0;
+        }
+    }
+
+    /* CONTACT FORM CSS BEGINS HERE!!! */
+
+    .container.main
+
+    {
+
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffff;
+    }
+    
+    .container.main::before
+    {
+
+        content: "";
+        background-color: #ffff;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 50%;
+
+
+    }
+
+    .container form
+
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        border: 1px solid #ac2bac;
+        width: 33%;
+        background-color: rgb(236, 28, 233);
+
+    }
+    
+    .container form input
+
+    {
+        margin: 5px;
+        height: 18pt;
+        font-size: 1rem;
+        padding: 5px;
+        border: 1px solid #ac2bac;
+    
+    }
+
+    .container form textarea
+
+    {
+        margin: 5px;
+        font-size: 1rem;
+        padding: 5px;
+        border: 1px solid #ac2bac;
+    
+    }
+
+    .container form button
+
+    {
+        align-self: center;
+        padding: 8px 10px 8px 10px;
+        background-color: #ac2bac;
+        color: #ffff;
+        border: 1px solid #ffff;
+        margin: 5px;
+    }
+
+    .contact form h2
+
+    {
+        padding: 0 0 10px 5px;
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .container form
+        {
+            width: 80%;
+            padding: 20px;
+
+        }
+        .container::before
+        {
+            border-radius: 15% 15%;
+        }
+    }
